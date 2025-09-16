@@ -1,4 +1,4 @@
-# Seq2Seq: Encoder–Decoder with and without Attention
+# Seq2Seq: Encoder-Decoder with and without Attention
 
 This folder contains PyTorch implementations of:
 
@@ -8,8 +8,8 @@ This folder contains PyTorch implementations of:
 ---
 
 ## Files
-- `seq2seq_basic.ipynb` – Encoder–Decoder without attention.
-- `seq2seq_attention.ipynb` – Encoder–Decoder with attention.
+- `seq2seq_basic.ipynb` - Encoder-Decoder without attention.
+- `seq2seq_attention.ipynb` - Encoder-Decoder with attention.
 - Training & evaluation scripts (BLEU score included).
 
 ---
