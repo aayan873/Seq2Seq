@@ -27,6 +27,6 @@ This folder contains minimal PyTorch implementations of two fundamental sequence
 
 ---
 
-## 🎯 Why this matters
+## Why this matters
 RNNs and LSTMs are the **building blocks** for more advanced sequence models like **Seq2Seq** and **Transformers**.
 
