@@ -14,13 +14,13 @@ This folder contains PyTorch implementations of:
 
 ---
 
-## 🧠 Key Ideas
+## Key Ideas
 - **Without Attention**: Decoder relies only on the final hidden state of the encoder → can lose information in long sentences.  
 - **With Attention**: Decoder dynamically “looks back” at relevant encoder states → solves the problem of information lose, improves translation quality.
 
 ---
 
-## 🔬 Comparison (English → Hindi translation task)
+## Comparison (English → Hindi translation task)
 
 | Model               | BLEU Score | Example Output Quality |
 |----------------------|------------|-------------------------|
