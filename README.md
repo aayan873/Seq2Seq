@@ -1,15 +1,40 @@
-# Sequence Models: RNN & LSTM
+# Seq2Seq: Encoder–Decoder with and without Attention
 
-This repository contains simple PyTorch implementations of two fundamental sequence models: **Recurrent Neural Networks (RNNs)** and **Long Short-Term Memory (LSTMs)**. The project demonstrates their application in two distinct tasks: a **Question-Answering (Q&A)** system using an RNN and a **text generation model for poetry** using an LSTM.
+This folder contains PyTorch implementations of:
 
----
-
-## 📁 Files
-
-- **100_Unique_QA_Dataset.csv**: A custom dataset containing question-answer pairs for the Q&A model.  
-- **qna-using-rnn-pytorch.ipynb**: A Jupyter notebook implementing an RNN-based model for the Q&A task.  
-- **poetry-generation-lstm.ipynb**: A Jupyter notebook for the LSTM-based text/poetry generation model.  
-- **shakespeare.txt**: A text dataset used for training the LSTM poetry generation model.  
+1. **Basic Seq2Seq model (Encoder–Decoder with LSTM)**
+2. **Seq2Seq with Attention (Bahdanau-style additive attention)**
 
 ---
 
+## Files
+- `seq2seq_basic.ipynb` – Encoder–Decoder without attention.
+- `seq2seq_attention.ipynb` – Encoder–Decoder with attention.
+- Training & evaluation scripts (BLEU score included).
+
+---
+
+## 🧠 Key Ideas
+- **Without Attention**: Decoder relies only on the final hidden state of the encoder → can lose information in long sentences.  
+- **With Attention**: Decoder dynamically “looks back” at relevant encoder states → solves the problem of information lose, improves translation quality.
+
+---
+
+## 🔬 Comparison (English → Hindi translation task)
+
+| Model               | BLEU Score | Example Output Quality |
+|----------------------|------------|-------------------------|
+| Seq2Seq (no attention) | **0.13**    | Sentences often incomplete or repetitive |
+| Seq2Seq + Attention   | **0.21**    | More fluent, better word alignment |
+
+At first glance, scores like 0.13 and 0.21 look small.
+That’s expected here because the dataset is fairly limited, the models are kept simple, and BLEU itself is harsh on languages like Hindi where word order can vary a lot.
+
+What actually matters is the relative jump = going from 0.13 to 0.21 is almost a 60% improvement. 
+**Attention improved performance and generated more natural translations.**
+
+---
+
+## Why this matters
+- This project demonstrates **how attention makes a real difference** in sequence-to-sequence tasks.  
+- It also builds intuition for how modern Transformers work (which are essentially attention-only models).
