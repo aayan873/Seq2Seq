@@ -1,15 +1,15 @@
-# Seq2Seq: Encoder-Decoder with and without Attention
+# English → Hindi Translator (Seq2Seq with and without Attention)
 
-This folder contains PyTorch implementations of:
-
-1. **Basic Seq2Seq model (Encoder–Decoder with LSTM)**
-2. **Seq2Seq with Attention (Bahdanau-style additive attention)**
+I built a simple English → Hindi translator using sequence-to-sequence models in PyTorch.
+The project explores two versions:
+1. **Basic Encoder–Decoder model (Encoder–Decoder with LSTM)**
+2. **Encoder–Decoder with Attention (Bahdanau-style additive attention)**
 
 ---
 
 ## Files
-- `seq2seq_basic.ipynb` - Encoder-Decoder without attention.
-- `seq2seq_attention.ipynb` - Encoder-Decoder with attention.
+- `English-to-hindi-using-encoder-decoder.ipynb` - Encoder-Decoder without attention.
+- `English-to-hindi-using-encoder-decoder_with_attention.ipynb` - Encoder-Decoder with attention.
 - Training & evaluation scripts (BLEU score included).
 
 ---
